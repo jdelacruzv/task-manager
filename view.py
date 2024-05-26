@@ -19,8 +19,6 @@ class TaskView:
 		print('5. Salir\n')
 	
 	def show_tasks(self, tasks):
-		print('================================')
-		print('Tareas pendientes y completadas:')
-		print('================================')
-		for task in tasks:
-			print(f'- {task}')
+		self.status = 'Pendiente'
+		for indice, task in enumerate(tasks):
+			print(f'{indice + 1} {task.capitalize()} --> {self.status}')

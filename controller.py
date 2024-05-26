@@ -11,6 +11,13 @@ class TaskController:
 	def __init__(self, model, view):
 		self.model = model
 		self.view = view
+	
+	def add_task(self, task):
+		self.model.add_task(task)
+
+	def show_tasks(self):
+		tasks = self.model.get_tasks()
+		self.view.show_tasks(tasks)
 
 	def update_view(self):
 		self.view.show_view()
