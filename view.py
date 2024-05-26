@@ -6,7 +6,7 @@
 class TaskView:
 	"""Class that works as the application view"""
 
-	def display_view(self):
+	def show_view(self):
 		line = '=' * 29
 		title = ' Gestor de Tareas Pendientes '
 		print(line)
@@ -17,3 +17,10 @@ class TaskView:
 		print('3. Mostrar Tarea')
 		print('4. Eliminar Tarea')
 		print('5. Salir')
+	
+	def show_tasks(self, tasks):
+		print('================================')
+		print('Tareas pendientes y completadas:')
+		print('================================')
+		for task in tasks:
+			print(f'- {task}')

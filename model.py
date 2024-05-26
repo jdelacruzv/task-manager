@@ -10,10 +10,13 @@ class TaskModel:
 		self.pending = []
 		self.completed = []
 	
-	def add_task(self):
-		pass
+	def add_task(self, task):
+		self.pending.append(task)
+	
+	def get_tasks(self):
+		return self.pending, self.completed
 
-	def show_task(self):
+	def show_tasks(self):
 		pass
 
 	def complete_task(self):
