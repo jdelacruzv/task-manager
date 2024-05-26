@@ -16,7 +16,7 @@ class TaskView:
 		print('2. Completar Tarea')
 		print('3. Mostrar Tarea')
 		print('4. Eliminar Tarea')
-		print('5. Salir')
+		print('5. Salir\n')
 	
 	def show_tasks(self, tasks):
 		print('================================')
