@@ -19,7 +19,7 @@ while True:
 	try:
 		option = int(input('Digite opción del menú: '))
 		if option == 5:
-			print('Saliendo del programa...')
+			print('<<< Saliendo del programa >>>\n')
 			os._exit(0)
 		if option == 1:
 			print('=== Agregar tarea ===')
@@ -36,7 +36,7 @@ while True:
 				print_message('completada')
 				controller.show_view()
 			else:
-				print('El índice ingresado no existe...')			
+				print('<<< Índice ingresado no existe >>>\n')			
 		if option == 3:
 			print('=== Mostrar tareas ===')
 			controller.show_tasks()
@@ -50,6 +50,6 @@ while True:
 				print_message('eliminada')
 				controller.show_view()
 			else:
-				print('El índice ingresado no existe...')
+				print('<<< El índice ingresado no existe >>>\n')
 	except:
-		print('Entrada no válida...')
+		print('<<< Entrada no válida >>>\n')

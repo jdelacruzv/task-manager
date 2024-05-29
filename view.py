@@ -16,3 +16,4 @@ class TaskView:
 	def show_task_list(self, tasks):
 		for indice, task in enumerate(tasks):
 			print(f'{indice + 1} {task[0].capitalize()} --> {task[1]}')
+		print()

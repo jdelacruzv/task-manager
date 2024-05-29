@@ -13,7 +13,7 @@ class TaskController:
 
 	def show_tasks(self):
 		tasks = self.model.get_tasks()
-		self.view.show_task_list(tasks)
+		self.view.show_task_list(tasks) if tasks else print('<<< No existen tareas >>>\n')
 
 	def delete_task(self, pos_task):
 		self.model.delete_task(pos_task)
@@ -24,7 +24,8 @@ class TaskController:
 	def validate_indice_task(self, pos_task):
 		tasks = self.model.get_tasks()
 		tasks_final = []
-		for indice, _ in enumerate(tasks):
-			tasks_final.append(indice + 1)
+		if tasks:
+			for indice, _ in enumerate(tasks):
+				tasks_final.append(indice + 1)
 		if pos_task in tasks_final:
 			return True
