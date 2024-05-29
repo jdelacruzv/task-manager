@@ -11,6 +11,10 @@ controller = TaskController(model, view)
 # Show view using the Controller
 controller.show_view()
 
+# Show exit message when the task is finished
+def print_message(message):
+	print(f'<<< Tarea {message} >>>\n')
+
 while True:
 	try:
 		option = int(input('Digite opción del menú: '))
@@ -21,7 +25,7 @@ while True:
 			print('=== Agregar tarea ===')
 			opt_add = input('Ingrese la tarea: ')
 			controller.add_task(opt_add, status='Pendiente')
-			print('+++ Tarea agregada +++ ')
+			print_message('agregada')
 			controller.show_view()	
 		if option == 2:
 			print('=== Completar tarea ===')
@@ -29,7 +33,7 @@ while True:
 			validate_indice = controller.validate_indice_task(pos_task)
 			if validate_indice:
 				controller.complete_task(pos_task)
-				print('+++ Tarea completada +++ ')
+				print_message('completada')
 				controller.show_view()
 			else:
 				print('El índice ingresado no existe...')			
@@ -43,7 +47,7 @@ while True:
 			validate_indice = controller.validate_indice_task(pos_task)
 			if validate_indice:
 				controller.delete_task(pos_task)
-				print('+++ Tarea eliminada +++ ')
+				print_message('eliminada')
 				controller.show_view()
 			else:
 				print('El índice ingresado no existe...')
