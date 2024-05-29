@@ -1,8 +1,3 @@
-"""
-    Author: José De La Cruz
-    Created: 2024-05-26
-"""
-
 class TaskView:
 	"""Class that works as the application view"""
 
@@ -17,8 +12,7 @@ class TaskView:
 		print('3. Mostrar Tarea')
 		print('4. Eliminar Tarea')
 		print('5. Salir\n')
-	
-	def show_tasks(self, tasks):
-		self.status = 'Pendiente'
+
+	def show_task_list(self, tasks):
 		for indice, task in enumerate(tasks):
-			print(f'{indice + 1} {task.capitalize()} --> {self.status}')
+			print(f'{indice + 1} {task[0].capitalize()} --> {task[1]}')
